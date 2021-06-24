@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="70px"
+        android:layout_height="70px"
+        android:layout_marginRight="30px"
+        android:padding="10dp"
+        android:src="@mipmap/ic_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/app_name"
+        app:layout_constraintBottom_toBottomOf="@+id/app_name"/>
+
+    <RelativeLayout
+        android:id="@+id/item_total_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/app_name"
+        android:background="@drawable/shape_total_corners"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/item_total_text_month_spend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_spend_text"
+            android:textSize="32px"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/item_iv_top_show"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:src="@mipmap/ih_show"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/item_total_text_month_spend"
+            android:layout_alignTop="@+id/item_total_text_month_spend"
+            android:layout_alignBottom="@+id/item_total_text_month_spend"/>
+
+        <TextView
+            android:id="@+id/tv_total_income_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_income"
+            android:textSize="26px"
+            android:textColor="@color/gray"
+            android:layout_alignLeft="@+id/item_total_income_money"
+            android:layout_marginTop="20px"
+            android:layout_below="@+id/item_total_text_month_spend"/>
+
+        <TextView
+            android:id="@+id/item_total_income_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥ 0"
+            android:layout_below="@+id/tv_total_income_money"
+            android:textSize="26sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_total_outcome_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_outcome"
+            android:textSize="26px"
+            android:textColor="@color/gray"
+            android:layout_alignTop="@+id/tv_total_income_money"
+            android:layout_alignBottom="@+id/tv_total_income_money"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/item_total_spend_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥ 0"
+            android:textSize="26sp"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/item_total_income_money"
+            android:layout_alignBottom="@+id/item_total_income_money" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/top_month_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/item_total_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:background="@color/gray">
+
+        <RelativeLayout
+            android:id="@+id/item_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corners"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/item_text_top_month_spend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/month_spend"/>
+
+            <TextView
+                android:id="@+id/item_text_top_month_spend_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥ 0"
+                android:layout_below="@+id/item_text_top_month_spend"
+                android:textSize="26sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/item_text_top_month_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/item_text_top_month_spend"
+                android:layout_alignBottom="@+id/item_text_top_month_spend"
+                android:text="@string/month_income"/>
+
+            <TextView
+                android:id="@+id/item_text_top_month_income_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/item_text_top_month_spend_money"
+                android:layout_alignBottom="@+id/item_text_top_month_spend_money"
+                android:textSize="26sp"
+                android:textColor="@color/black"
+                android:text="￥0"/>
+
+            <TextView
+                android:id="@+id/item_text_top_budget_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/item_text_top_month_spend_money"
+                android:layout_below="@+id/item_text_top_month_income_money"
+                android:layout_marginTop="10px"
+                android:text="@string/budget_last"/>
+
+            <TextView
+                android:id="@+id/item_text_top_budget_last_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥ 0"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/item_text_top_budget_last"
+                android:layout_alignTop="@+id/item_text_top_budget_last"
+                android:layout_alignBottom="@+id/item_text_top_budget_last"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_text_top_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        app:layout_constraintTop_toBottomOf="@+id/top_month_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:scrollbars="none"
+        android:background="@color/gray"/>
+
+    <Button
+        android:id="@+id/btn_record"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

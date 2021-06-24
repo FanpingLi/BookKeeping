@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="outcome_type_text">
+        <item>@string/out_tx_other</item>
+        <item>@string/out_tx_food</item>
+        <item>@string/out_tx_traffic</item>
+        <item>@string/out_tx_shop</item>
+        <item>@string/out_tx_clothes</item>
+        <item>@string/out_tx_necessary</item>
+        <item>@string/out_tx_somke_wine_tea</item>
+        <item>@string/out_tx_water_electricity</item>
+        <item>@string/out_tx_snacks</item>
+        <item>@string/out_tx_trip</item>
+        <item>@string/out_tx_cosmetic</item>
+        <item>@string/out_tx_phone_bill</item>
+        <item>@string/out_tx_entertainment</item>
+        <item>@string/out_tx_study</item>
+        <item>@string/out_tx_medical_treatment</item>
+        <item>@string/out_tx_game</item>
+        <item>@string/out_tx_children</item>
+        <item>@string/out_tx_insurance</item>
+        <item>@string/out_tx_pet</item>
+        <item>@string/out_tx_fitness</item>
+        <item>@string/out_tx_house</item>
+        <item>@string/out_tx_relationship</item>
+    </string-array>
+
+    <string-array name="income_type_text">
+        <item>@string/out_tx_other</item>
+        <item>@string/in_tx_salary</item>
+        <item>@string/in_tx_bonus</item>
+        <item>@string/in_tx_debt_collection</item>
+        <item>@string/in_tx_second_hand_transaction</item>
+        <item>@string/in_tx_gift_cash</item>
+        <item>@string/in_tx_interest</item>
+        <item>@string/in_tx_borrow</item>
+        <item>@string/in_tx_fund</item>
+        <item>@string/in_tx_part_time</item>
+    </string-array>
+</resources>

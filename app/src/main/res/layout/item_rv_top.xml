@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    android:background="@color/gray">
+
+    <RelativeLayout
+        android:id="@+id/item_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="20dp">
+    
+        <TextView
+            android:id="@+id/item_text_top_month_spend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/month_spend"/>
+
+        <TextView
+            android:id="@+id/item_text_top_month_spend_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥ 0"
+            android:layout_below="@+id/item_text_top_month_spend"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/item_iv_top_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ih_show"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/item_text_top_month_spend_money" />
+
+        <TextView
+            android:id="@+id/item_text_top_month_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_text_top_month_spend_money"
+            android:text="@string/month_income"/>
+
+        <TextView
+            android:id="@+id/item_text_top_month_income_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/item_text_top_month_income"
+            android:layout_below="@+id/item_text_top_month_spend_money"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:text="￥0"/>
+
+        <TextView
+            android:id="@+id/item_text_top_budget_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_text_top_month_income"
+            android:layout_toLeftOf="@+id/item_text_top_budget_last_money"
+            android:text="@string/budget_last"/>
+
+        <TextView
+            android:id="@+id/item_text_top_budget_last_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥ 0"
+            android:textColor="@color/black"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/item_text_top_month_income"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/item_text_top_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ih_biaoge"
+            android:layout_below="@+id/item_text_top_month_income"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/view_chart"
+            android:textColor="@color/green"
+            android:drawablePadding="10dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_text_top_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

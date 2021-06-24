@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.SearchActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="20px"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@mipmap/ic_back"/>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="550px"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
+            android:hint="@string/search_text"
+            android:layout_marginLeft="10px"
+            android:maxLines="1"
+            app:layout_constraintTop_toTopOf="@+id/iv_back"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+            app:layout_constraintLeft_toRightOf="@+id/iv_back"/>
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_marginRight="5px"
+            android:background="@mipmap/ic_clear"
+            app:layout_constraintTop_toTopOf="@+id/et_search"
+            app:layout_constraintBottom_toBottomOf="@+id/et_search"
+            app:layout_constraintRight_toRightOf="@+id/et_search"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_marginLeft="10px"
+            android:background="@mipmap/ic_search"
+            app:layout_constraintLeft_toRightOf="@+id/et_search"
+            app:layout_constraintTop_toTopOf="@+id/et_search"
+            app:layout_constraintBottom_toBottomOf="@+id/et_search"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</LinearLayout>
